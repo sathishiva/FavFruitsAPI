@@ -1,0 +1,103 @@
+/* Your CSS here */
+
+body {
+    font-family: 'Lucida Grande', sans-serif;
+    background: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+header {
+    margin: 0;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid #ccc;
+    background: #fff;
+}
+header h1 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #555;
+    padding: 10px 0;
+}
+#main {
+    width: 40%;
+    margin: 0 auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    background: #fff;
+}
+
+#bars ul li,
+#list ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1em;
+}
+
+#list ul li {
+    border-bottom: 1px solid #ccc;
+    padding: 1.2em;
+}
+
+#list ul li:last-child {
+    border-bottom: none;
+}
+
+#bars {
+    background: #fff;
+    border-bottom: 2px solid #ccc;
+    position: sticky;
+    top: 58px;
+}
+#bars ul li {
+	padding: 0.8em 1.2em;	
+}
+#bars li:hover {
+	background: #e3f3f6;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+#bars li>* {
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+#bars li>a:nth-child(1) {
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+#bars li>a:nth-child(3) {
+    text-align: right;
+}
+
+#bars li>span {
+    border: 1px solid #ccc;
+    height: 30px;
+    display: flex;
+}
+
+#bars li>span>span {
+	animation: draw 1s ease-in-out;
+    background: green;
+}
+#reload {
+	padding: 20px;
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    right: 30%;
+}
+@keyframes draw{
+  0%{width: 0;} 
+}
